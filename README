@@ -1,0 +1,16 @@
+When run, this Java console application generates a pseudo random number, then encrypts and decrypts the numeric value, using the RSA algorithm. No external data files are needed to run the program.
+
+----
+
+The program generates two prime numbers, p and q, that are between the range of 2^64 and 2^256.
+
+Next, variables of the RSA algorithm are derived:
+
+n = p*q
+m = (p-1)(q-1)
+e = I used the large prime number 65537 for this implementation. e is coprime to m.
+d is derived from: 1 = de mod n
+
+These values give us our Public Key, (e, n), and Private Key (d, n).
+
+Lastly, the actual encryption and decryption are performed on the plaintext value, pseudo random number.
